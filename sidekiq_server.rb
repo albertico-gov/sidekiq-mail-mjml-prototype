@@ -14,9 +14,9 @@ require 'dotenv'
 Dotenv.load 'sidekiq.env', 'mail.env'
 
 # Load configurations...
-require_relative 'config/sidekiq' # Sidekiq
 require_relative 'config/mail' # Mail
 require_relative 'config/mjml' # MJML
+require_relative 'config/sidekiq' # Sidekiq
 
 # Load Sidekiq worker for sending emails (EmailWorker)
 require_relative 'workers/email'
